@@ -2,7 +2,7 @@
 
 This project is a PHP + MySQL library system updated for a visitor log workflow with Google Sign-In, role-based access control, visitor analytics, and block management.
 
-## Live app[
+## Live app
 https://librarymanagement.42web.io
 
 ## Repository submission
