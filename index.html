@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEU Library Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </head>
+  <body>
+    <video autoplay muted loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="bg-video">
+      <source src="/src/video background/Bgg.mp4" type="video/mp4" />
+    </video>
+
+    <main class="container">
+      <section class="content">
+        <h1>LOGIN TO<br />LIBRARY SYSTEM</h1>
+        <p>Google sign-in for users and admins, plus visitor logging for the NEU Library.</p>
+      </section>
+
+      <aside class="login">
+        <h2>Login</h2>
+
+        <div id="googleButtonWrap" class="google-wrap">
+          <div id="googleSignInButton"></div>
+        </div>
+
+        <div id="loginStatus" class="status-message"></div>
+
+        <form id="detailsForm" class="details-form hidden">
+          <div class="profile-preview" id="profilePreview"></div>
+
+          <div class="field-block" id="roleBlock">
+            <h3>Access role</h3>
+            <div class="cards single-row" id="roleCards"></div>
+          </div>
+
+          <div class="field-block">
+            <label for="userCategory">Select account type</label>
+            <select id="userCategory" name="userCategory">
+              <option value="">Choose one</option>
+              <option value="Student">Student</option>
+              <option value="Employee">Employee</option>
+              <option value="Teacher">Teacher</option>
+              <option value="Staff">Staff</option>
+              <option value="Visitor">Visitor</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="field-block">
+            <label for="college">College</label>
+            <input type="text" id="college" name="college" placeholder="e.g. College of Computer Studies" />
+          </div>
+
+          <div class="field-block checkbox-line">
+            <input type="checkbox" id="isEmployee" name="isEmployee" />
+            <label for="isEmployee">This visitor is an employee (teacher or staff)</label>
+          </div>
+
+          <div class="field-block" id="reasonBlock">
+            <h3>Reason for visiting</h3>
+            <div class="cards" id="reasonCards">
+              <button type="button" class="card" data-value="Reading">Reading</button>
+              <button type="button" class="card" data-value="Research">Research</button>
+              <button type="button" class="card" data-value="Academic Requirement">Academic Requirement</button>
+              <button type="button" class="card" data-value="General Browsing">General Browsing</button>
+            </div>
+          </div>
+
+          <button type="submit" id="continueBtn">Continue</button>
+        </form>
+      </aside>
+    </main>
+
+    <script src="../../config/google-client.js.php"></script>
+    <script src="script/login.js"></script>
+  </body>
+</html>
